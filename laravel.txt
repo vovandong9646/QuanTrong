@@ -1,0 +1,15 @@
+﻿mở app/providers/appServiceProvider.php
+
+trong function boot(){
+	view()->composer('header',function($view){
+	
+		$loai_sp = Sanpham::all();
+		
+		$view->with('loaisp',$loai_sp);
+	
+	});
+
+
+
+
+}
